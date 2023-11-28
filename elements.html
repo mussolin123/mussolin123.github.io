@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Jogo da Velha!</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Jogos da Hora!</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="generic.html" class="active">Jogos</a></li>
+						<li><a href="elements.html">Outros Jogos</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Jogo da Velha!</h1>
+							
+<style type="text/css">
+<!--
+.bla{
+width: 20px;
+height: 80px;
+background: white;
+font-size: 30px;
+color: purple;
+cursor: pointer;
+}
+.ble{
+background: #000066;
+}
+-->
+</style>
+<script language="JavaScript" type="text/javascript">
+<!--
+letra = "X";
+
+function joga(celula){
+    celulaclicada = document.getElementById(celula).innerHTML;
+   if (celulaclicada == "X" || celulaclicada == "O"){
+       alert("Opa, este quadrado já foi escolhido!");
+   }else{
+        document.getElementById(celula).innerHTML = letra;
+        if (letra == "X"){
+            letra = "O";
+        }else{
+            letra = "X";
+        }
+   }
+}
+
+function verif(){
+   c11 = document.getElementById('cel11').innerHTML;
+   c12 = document.getElementById('cel12').innerHTML;
+   c13 = document.getElementById('cel13').innerHTML;
+   c21 = document.getElementById('cel21').innerHTML;
+   c22 = document.getElementById('cel22').innerHTML;
+   c23 = document.getElementById('cel23').innerHTML;
+   c31 = document.getElementById('cel31').innerHTML;
+   c32 = document.getElementById('cel32').innerHTML;
+   c33 = document.getElementById('cel33').innerHTML;
+   if (((c11 != '') && (c12 != '') && (c13 != '') && (c11 == c12) && (c12 == c13)) || ((c11 != '') && (c22 != '') && (c33 != '') && (c11 == c22) && (c22 == c33)) || ((c11 != '') && (c21 != '') && (c31 != '') && (c11 == c21) && (c21 == c31)) || ((c21 != '') && (c22 != '') && (c23 != '') && (c21 == c22) && (c22 == c23)) || ((c31 != '') && (c32 != '') && (c33 != '') && (c31 == c32) && (c32 == c33)) || ((c12 != '') && (c22 != '') && (c32 != '') && (c12 == c22) && (c22 == c32)) || ((c13 != '') && (c23 != '') && (c33 != '') && (c13 == c23) && (c23 == c33)) || ((c31 != '') && (c22 != '') && (c13 != '') && (c31 == c22) && (c22 == c13))){
+       alert('Você ganhou! Parabéns campeão!');
+      novo();
+   }
+}
+
+function novo(){
+    for (i=1; i<4; i++){
+       for (j=1; j<4; j++){
+          nomecelula = 'cel' + i + j
+           document.getElementById(nomecelula).innerHTML = '';
+      
+      }
+   }
+}
+
+
+//-->
+</script>
+
+</head>
+<body>
+<table class="ble">
+
+<tr>
+<td align="center" valign="middle" id="cel11" class="bla" onclick="joga(this.id);verif();"></td>
+<td align="center" valign="middle" id="cel12" class="bla" onclick="joga(this.id);verif();"></td>
+<td align="center" valign="middle" id="cel13" class="bla" onclick="joga(this.id);verif();"></td>
+</tr>
+
+<tr>
+<td align="center" valign="middle" id="cel21" class="bla" onclick="joga(this.id);verif();"></td>
+<td align="center" valign="middle" id="cel22" class="bla" onclick="joga(this.id);verif();"></td>
+<td align="center" valign="middle" id="cel23" class="bla" onclick="joga(this.id);verif();"></td>
+</tr>
+
+<tr>
+<td align="center" valign="middle" id="cel31" class="bla" onclick="joga(this.id);verif();"></td>
+<td align="center" valign="middle" id="cel32" class="bla" onclick="joga(this.id);verif();"></td>
+<td align="center" valign="middle" id="cel33" class="bla" onclick="joga(this.id);verif();"></td>
+</tr>
+<br>
+</table>
+<br><input type="button" name="limpar" value="Novo jogo" onclick="novo();" />
+</body>
+</html>
+<br>
+
+<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Mussolin. Todos os direitos reservados.</li><li>Design: <a href="https://www.linkedin.com/in/leticia-mussolin-689093185/">Leticia Mussolin</a></li>
+					</ul>
+				</div>
+			</footer>

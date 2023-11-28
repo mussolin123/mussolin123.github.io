@@ -1,9 +1,3 @@
-/*
-	jogo da cobrinha aqui
-
-	
-*/
-
 
 
 (function($) {
@@ -474,3 +468,4 @@
 				  
 
 })(jQuery);
+

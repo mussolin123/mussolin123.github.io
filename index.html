@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio de Criptografia</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="imagem-container">
+            <img src="https://i.imgflip.com/7fhly5.png" alt="Gatinho hacker" class="imagem-animada">
+        </div>
+
+        <h1>Desafio de Criptografia</h1>
+        <p>Insira sua senha abaixo para criptografá-la:</p>
+        <input type="password" id="senha" placeholder="Digite sua senha" autocomplete="new-password">
+        <button onclick="criptografarSenha()">Enviar Senha</button>
+        <div id="resultado"></div>
+
+        <p>Insira sua senha criptografada e a chave para descriptografá-la:</p>
+        <input type="text" id="senhaCriptografada" placeholder="Digite a senha criptografada">
+        <input type="text" id="chaveDescriptografacao" placeholder="Digite a chave de descriptografação">
+        <button onclick="descriptografarSenha()">Descriptografar</button>
+        <div id="resultadoDescriptografado"></div>
+    </div>
+
+    <button id="revelarExplicacao" class="btn-explicacao">?</button>
+
+    <div id="explicacao" class="explicacao">
+        <h3>Como Funciona a Criptografia?</h3>
+        <p>Essa criptografia é baseada em um mapeamento aleatório de caracteres. Cada caractere da senha é substituído por uma sequência aleatória de 10 caracteres. A cada nova senha, o mapeamento é alterado, o que torna a criptografia única para cada usuário e cada senha.</p>
+        <p>O processo de criptografia é feito através da criação de um mapeamento aleatório para cada caractere permitido e, em seguida, cada caractere da senha é substituído pela sua sequência correspondente.</p>
+    </div>
+
+    <br><br> <br><br> <br><br>
+    <footer>
+        <p>Feito por <a href="https://www.linkedin.com/in/leticia-mussolin-689093185/?originalSubdomain=br" target="_blank">Leticia Mussolin</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
